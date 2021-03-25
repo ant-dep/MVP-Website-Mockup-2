@@ -1,0 +1,31 @@
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        position: relative;
+        right: 15px;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+        width: 65vw;
+        margin-bottom: 2vw;
+    }
+    p {
+        font-weight: 100;
+        width: 90vw;
+        margin: 0;
+    }
+    button {
+        width: 60vw;
+        margin: 10vw;
+        padding: 3vw;
+    }
+}

@@ -1,19 +1,25 @@
 {
-    "name": "Antoinedepertat_3_24032121",
+    "name": "antoinedepertat_3_24032121",
     "version": "1.0.0",
-    "description": "\"\"",
+    "description": "Brief créatif Création du site Ohmyfood! Paris",
     "main": "index.js",
     "scripts": {
-        "sass": "sass --watch ./Styles/sass/main.scss:./Styles/css/style.css --style compressed"
+        "sass": "sass --watch ./Styles/sass/main.scss:./Styles/css/style.css --style compressed",
+        "prefix": "postcss ./Styles/css/style.css --use autoprefixer -d ./Styles/css/"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/lHimiko/AntoinedePertat_3_24032121.git"
     },
-    "author": "Antoine de Pertat",
+    "author": "",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/lHimiko/AntoinedePertat_3_24032121/issues"
     },
-    "homepage": "https://github.com/lHimiko/AntoinedePertat_3_24032121#readme"
+    "homepage": "https://github.com/lHimiko/AntoinedePertat_3_24032121#readme",
+    "browserslist": [
+        "last 1 version",
+        "> 1%",
+        "IE 10"
+    ]
 }

@@ -1,0 +1,27 @@
+.btn--rounded {
+    border-radius: $large-radius;
+}
+
+.btn--squared {
+    border-radius: $medium-radius;
+}
+
+.card-squared {
+    border-radius: $small-radius;
+}
+
+.description button {
+    width: 60vw;
+    margin: 10vw;
+    padding: 3vw;
+    padding: 0;
+    border: none;
+    outline: none;
+    font: inherit;
+    a {
+        color: inherit;
+        text-decoration: inherit;
+        cursor: inherit;
+        color: white;
+    }
+}

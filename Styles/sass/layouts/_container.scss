@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    flex-direction: column;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 1px 5px -1px $bg-lightblack;
+        z-index: 1;
+        height: 15vw;
+        img {
+            width: 50vw;
+        }
+    }
+}

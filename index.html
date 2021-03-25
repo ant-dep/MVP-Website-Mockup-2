@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./Styles/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Fonts from google fonts. Logo and titles with Shrikhand, body with Roboto-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <!--Personnal link to Font Awesome library-->
+    <script src="https://kit.fontawesome.com/d28e6df8ab.js" crossorigin="anonymous"></script>
     <meta name="Ohmyfood!" content="Draft for Ohmyfood! website" />
 
     <!-- Twitter Card data -->
@@ -30,16 +32,99 @@
 
 <body>
     <header>
-
+        <div class="logo">
+            <img src="/images/logo/ohmyfood.png" alt="Ohmyfood! logo">
+        </div>
+        <div class="location bg-darkgrey">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Paris, Belleville</p>
+        </div>
+        <form class="location__form">
+            <input type="text" id="location" name="Location" value="Paris, Belleville">
+            <input type="submit" value="Rechercher">
+        </form>
+        <section class="description bg-lightgrey">
+            <h1>R&eacute;servez le menu qui vous convient!</h1>
+            <p>D&eacute;couvrez des restaurants d'&eacute;xception, s&eacute;lection&eacute;s par nos soins.</p>
+            <button class="description__btn btn--rounded btn--linear-gradient" type="button">
+                    <a href="#restaurants">Explorer nos restaurants</a>
+            </button>
+        </section>
     </header>
-    <section>
 
+    <section class="fonctionnement">
+        <h1>fonctionnement</h1>
+        <div class="fonctionnement__step btn-squared">
+            <i class="icon-number">1</i>
+            <i class="fas fa-mobile-alt"></i>
+            <p>Choisissez un restaurant</p>
+        </div>
+        <div class="fonctionnement__step btn-squared">
+            <i class="icon-number">2</i>
+            <i class="fas fa-list-ul"></i>
+            <p>Composez votre menu</p>
+        </div>
+        <div class="fonctionnement__step btn-squared bg-mainclr-light">
+            <i class="icon-number">3</i>
+            <i class="fas fa-store color-primary"></i>
+            <p>D&eacute;gustez au restaurant</p>
+        </div>
     </section>
-    <section>
-
+    <section id="restaurants" class="bg-lightgrey">
+        <h1>Restaurants</h1>
+        <Aside class="restaurants__cards">
+            <figure class="card-squared">
+                <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La Palette du go&ucirc;t">
+                <p class="new-Tag">Nouveau</p>
+                <figcaption>
+                    <h2>La Palette du go&ucirc;t</h2>
+                    <p>Ménilmontant</p>
+                    <i class="far fa-heart"></i>
+                </figcaption>
+            </figure>
+            <figure class="card-squared">
+                <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchant&eacute;e">
+                <p class="new-Tag">Nouveau</p>
+                <figcaption>
+                    <h2>La note enchant&eacute;e</h2>
+                    <p>Ménilmontant</p>
+                    <i class="far fa-heart"></i>
+                </figcaption>
+            </figure>
+            <figure class="card-squared">
+                <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="&Agrave la fran&ccedil;aise">
+                <p class="new-Tag">Nouveau</p>
+                <figcaption>
+                    <h2>&Agrave la fran&ccedil;aise</h2>
+                    <p>Ménilmontant</p>
+                    <i class="far fa-heart"></i>
+                </figcaption>
+            </figure>
+            <figure class="card-squared">
+                <img src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le d&eacute;lice des sens">
+                <figcaption>
+                    <h2>Le d&eacute;lice des sens</h2>
+                    <p>Ménilmontant</p>
+                    <i class="far fa-heart"></i>
+                </figcaption>
+            </figure>
+        </Aside>
     </section>
-    <footer>
-
+    <!--filter: invert(1);-->
+    <footer class="footer color-invert bg-lightblack">
+        <img src="/images/logo/ohmyfood.png" alt="Ohmyfood! logo">
+        <a href="#">
+            <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
+        </a>
+        <a href="#">
+            <p><i class="fas fa-hands-helping"></i>Devenir partenaire</p>
+        </a>
+        <a href="#">
+            <p>Mentions légales</p>
+        </a>
+        <a href="mailto:contact@ohmyfood-paris.com">
+            <p>Contact</p>
+        </a>
     </footer>
 </body>
 
