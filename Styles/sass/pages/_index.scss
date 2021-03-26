@@ -16,16 +16,60 @@
     text-align: center;
     h1 {
         width: 65vw;
-        margin-bottom: 2vw;
+        margin: 10vw 0 5vw 0;
     }
     p {
         font-weight: 100;
+        font-size: 18px;
         width: 90vw;
         margin: 0;
     }
-    button {
-        width: 60vw;
-        margin: 10vw;
-        padding: 3vw;
+}
+
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8vw 0;
+    h1 {
+        align-self: flex-start;
+        padding: 0 0 4vw 5vw;
     }
+    &__step {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 82vw;
+        margin: 1vw 0 5vw 0;
+        padding: 2vw;
+        @include box-shadow($shadow-size-m);
+        p {
+            padding-right: 10vw;
+        }
+        i {
+            position: relative;
+            right: 7vw;
+        }
+        .icon-number {
+            position: relative;
+            right: 13vw;
+            font-size: 14px;
+            height: 4vw;
+            width: 4vw;
+            color: white;
+            border-radius: 50%;
+            background-color: $color-primary;
+            padding: 1vw;
+            text-align: center;
+        }
+        .fa-mobile-alt,
+        .fa-list-ul {
+            color: lighten($color: #000000, $amount: 50%);
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.bg--mainclr-light {
+    @include lighten;
 }

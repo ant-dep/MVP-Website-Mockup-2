@@ -4,36 +4,43 @@ $color-tertiary: #99E2D0;
 $bg-darkgrey:#eaeaea;
 $bg-lightgrey: #f6f6f6;
 $bg-lightblack: #363636;
-.btn--linear-gradient {
-    background: linear-gradient($color-secondary, $color-primary);
-}
-
-.bg-mainclr-light {
-    background: lighten($color-secondary, 50%);
-}
-
-.new-Tag {
-    background: $color-tertiary;
-}
-
+$small-radius: 15px;
+$medium-radius: 20px;
+$large-radius: 50px;
+$shadow-size-s: 0px 8px 15px -5px;
+$shadow-size-m: 0px 5px 10px 2px;
 .color-primary {
     color: $color-primary;
 }
 
-.bg-darkgrey {
+.color-secondary {
+    color: $color-secondary;
+}
+
+.color-tertiary {
+    background: $color-tertiary;
+}
+
+.bg--darkgrey {
     background-color: $bg-darkgrey;
 }
 
-.bg-lightgrey {
+.bg--lightgrey {
     background-color: $bg-lightgrey;
 }
 
-.bg-lightblack {
+.bg--lightblack {
     background-color: $bg-lightblack;
 }
 
-$small-radius: 15px;
-$medium-radius: 20px;
-$large-radius: 50px;
-$small-shadow: 0px 8px 15px -5px;
-$medium-shadow: 0px 5px 10px 2px;
+.btn--rounded {
+    border-radius: $large-radius;
+}
+
+.btn--squared {
+    border-radius: $medium-radius;
+}
+
+.card--squared {
+    border-radius: $small-radius;
+}

@@ -1,6 +1,7 @@
 header {
     display: flex;
     flex-direction: column;
+    height: auto;
     .logo {
         display: flex;
         justify-content: center;
@@ -11,5 +12,8 @@ header {
         img {
             width: 50vw;
         }
+    }
+    h1 {
+        margin: 10vw 0 8vw 0;
     }
 }
