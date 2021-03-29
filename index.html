@@ -44,8 +44,8 @@
             <input type="submit" value="Rechercher">
         </form>
         <section class="description bg--lightgrey">
-            <h1>R&eacute;servez le menu qui vous convient!</h1>
-            <p>D&eacute;couvrez des restaurants d'&eacute;xception, s&eacute;lection&eacute;s par nos soins.</p>
+            <h1>Réservez le menu qui vous convient!</h1>
+            <p>Découvrez des restaurants d'exception, sélectionnez par nos soins.</p>
             <button class="description__btn btn--rounded btn--linear-gradient" type="button">
                     <a href="#restaurants">Explorer nos restaurants</a>
             </button>
@@ -55,76 +55,117 @@
     <section class="fonctionnement">
         <h1>Fonctionnement</h1>
         <div class="fonctionnement__step btn--squared bg--lightgrey">
-            <p class="icon-number">1</p>
+            <span class="icon-nb">1</span>
             <i class="fas fa-mobile-alt"></i>
             <p>Choisissez un restaurant</p>
         </div>
         <div class="fonctionnement__step btn--squared bg--lightgrey">
-            <p class="icon-number">2</p>
+            <span class="icon-nb">2</span>
             <i class="fas fa-list-ul"></i>
             <p>Composez votre menu</p>
         </div>
         <div class="fonctionnement__step btn--squared bg--mainclr-light">
-            <p class="icon-number">3</p>
+            <span class="icon-nb">3</span>
             <i class="fas fa-store color-primary"></i>
-            <p>D&eacute;gustez au restaurant</p>
+            <p>Dégustez au restaurant</p>
         </div>
     </section>
     <section id="restaurants" class="bg--lightgrey">
         <h1>Restaurants</h1>
-        <Aside class="restaurants__cards">
-            <figure class="card--squared">
-                <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La Palette du go&ucirc;t">
-                <p class="new-Tag">Nouveau</p>
-                <figcaption>
-                    <h2>La Palette du go&ucirc;t</h2>
-                    <p>Ménilmontant</p>
-                    <i class="far fa-heart"></i>
-                </figcaption>
-            </figure>
-            <figure class="card--squared">
-                <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchant&eacute;e">
-                <p class="new-Tag color-tertiary">Nouveau</p>
-                <figcaption>
-                    <h2>La note enchant&eacute;e</h2>
-                    <p>Ménilmontant</p>
-                    <i class="far fa-heart"></i>
-                </figcaption>
-            </figure>
-            <figure class="card--squared">
-                <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="&Agrave la fran&ccedil;aise">
-                <p class="new-Tag color-tertiary">Nouveau</p>
-                <figcaption>
-                    <h2>&Agrave la fran&ccedil;aise</h2>
-                    <p>Ménilmontant</p>
-                    <i class="far fa-heart"></i>
-                </figcaption>
-            </figure>
-            <figure class="card--squared">
-                <img src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le d&eacute;lice des sens">
-                <figcaption>
-                    <h2>Le d&eacute;lice des sens</h2>
-                    <p>Ménilmontant</p>
-                    <i class="far fa-heart"></i>
-                </figcaption>
-            </figure>
-        </Aside>
+        <div class="restaurants">
+            <a href="la_palette_du_gout.html">
+                <figure class="restaurants__card card--squared">
+                    <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La Palette du goût">
+                    <figcaption>
+                        <h4>La Palette du goût</h4>
+                        <p>Ménilmontant</p>
+                    </figcaption>
+                    <p class="new-Tag color-tertiary">Nouveau</p>
+                </figure>
+            </a>
+            <div class="heart-icons">
+                <svg class="heart-main" viewBox="0 0 512 512" title="heart">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+              </svg>
+                <svg class="heart-background" viewBox="0 0 512 512" title="heart">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+              </svg>
+            </div>
+        </div>
+        <div class="restaurants">
+            <a href="la_note_enchantee.html">
+                <figure class="restaurants__card card--squared">
+                    <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                    <figcaption>
+                        <h4>La note enchantée</h4>
+                        <p>Charonne</p>
+                    </figcaption>
+                    <p class="new-Tag color-tertiary">Nouveau</p>
+                </figure>
+            </a>
+            <div class="heart-icons">
+                <svg class="heart-main" viewBox="0 0 512 512" title="heart">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+              </svg>
+                <svg class="heart-background" viewBox="0 0 512 512" title="heart">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+              </svg>
+            </div>
+        </div>
+        <div class="restaurants">
+            <a href="a_la_francaise.html">
+                <figure class="restaurants__card card--squared">
+                    <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="&Agrave la française">
+                    <figcaption>
+                        <h4>À la française</h4>
+                        <p>Cité Rouge</p>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="heart-icons">
+                <svg class="heart-main" viewBox="0 0 512 512" title="heart">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+              </svg>
+                <svg class="heart-background" viewBox="0 0 512 512" title="heart">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+              </svg>
+            </div>
+        </div>
+        <div class="restaurants">
+            <a href="le_delice_des_sens.html">
+                <figure class="restaurants__card card--squared">
+                    <img src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+                    <figcaption>
+                        <h4>Le délice des sens</h4>
+                        <p>Folie-Méricourt</p>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="heart-icons">
+                <svg class="heart-main" viewBox="0 0 512 512" title="heart">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+              </svg>
+                <svg class="heart-background" viewBox="0 0 512 512" title="heart">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                <!--the only way to get a gradient color to fill a SVG. Linear-gradient is for backgrounds-->
+                <linearGradient id="gradient-vertical" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--color-stop-1)" />
+                    <stop offset="100%" stop-color="var(--color-stop-2)" />
+                  </linearGradient>
+              </svg>
+            </div>
+        </div>
     </section>
-    <!--filter: invert(1);-->
     <footer class="footer color--invert bg--lightblack">
-        <img src="/images/logo/ohmyfood.png" alt="Ohmyfood! logo">
-        <a href="#">
-            <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
-        </a>
-        <a href="#">
-            <p><i class="fas fa-hands-helping"></i>Devenir partenaire</p>
-        </a>
-        <a href="#">
-            <p>Mentions légales</p>
-        </a>
-        <a href="mailto:contact@ohmyfood-paris.com">
-            <p>Contact</p>
-        </a>
+        <img src="/images/logo/ohmyfood@2x.svg" alt="Ohmyfood! logo">
+        <div class="fork">
+            <i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a>
+        </div>
+        <div class="hands">
+            <i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a>
+        </div>
+        <a href="#">Mentions légales</a>
+        <a href="mailto:contact@ohmyfood-paris.com">Contact</a>
     </footer>
 </body>
 

@@ -1,0 +1,31 @@
+@keyframes stroke-animation {
+    0% {
+        stroke-dashoffset: 1550;
+        stroke: url(/index.html/#gradient-vertical) pink;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke: url(/index.html/#gradient-vertical) purple;
+    }
+}
+
+@keyframes fill {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        fill: url(/index.html/#gradient-vertical) pink;
+    }
+    40% {
+        opacity: 0.2;
+        fill: url(/index.html/#gradient-vertical) pink;
+    }
+    70% {
+        opacity: 0.6;
+        fill: url(/index.html/#gradient-vertical) purple;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+        fill: url(/index.html/#gradient-vertical) purple;
+    }
+}

@@ -1,7 +1,7 @@
 .btn--linear-gradient {
-    background: linear-gradient($color-secondary, $color-primary);
+    @include bg-gradient;
 }
 
-.description button {
-    @include btnGradient;
+.description__btn {
+    @include btn-gradient;
 }

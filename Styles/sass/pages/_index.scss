@@ -2,9 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 400;
     i {
-        position: relative;
-        right: 15px;
+        position: absolute;
+        left: 28vw;
     }
 }
 
@@ -29,6 +32,7 @@
 .fonctionnement {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 8vw 0;
     h1 {
@@ -39,37 +43,118 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
         width: 82vw;
         margin: 1vw 0 5vw 0;
         padding: 2vw;
         @include box-shadow($shadow-size-m);
         p {
-            padding-right: 10vw;
+            text-align: start;
+            width: 50vw;
+            font-weight: 400;
         }
-        i {
-            position: relative;
-            right: 7vw;
+        svg {
+            position: absolute;
+            left: 10vw;
+            font-size: 1.2rem;
         }
-        .icon-number {
-            position: relative;
-            right: 13vw;
-            font-size: 14px;
-            height: 4vw;
-            width: 4vw;
-            color: white;
-            border-radius: 50%;
-            background-color: $color-primary;
-            padding: 1vw;
-            text-align: center;
+        .icon-nb {
+            position: absolute;
+            @include number-ul;
+            left: -2vw;
         }
         .fa-mobile-alt,
         .fa-list-ul {
             color: lighten($color: #000000, $amount: 50%);
-            font-size: 1.3rem;
         }
     }
 }
 
 .bg--mainclr-light {
     @include lighten;
+}
+
+#restaurants,
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    padding: 5vw;
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        background-color: white;
+        @include box-shadow($shadow-size-m);
+        border-radius: $small-radius;
+        height: 60vw;
+        margin: 2vw 0;
+        overflow: hidden;
+        img {
+            @include card-img;
+        }
+        figcaption {
+            height: 15%;
+            margin: 0;
+            padding: 0.5em 0 2em 1em;
+            h4,
+            p {
+                margin: 1.5vw 0;
+            }
+        }
+        .new-Tag {
+            @include new-tag;
+            bottom: 80%;
+            left: 75%;
+        }
+    }
+    .heart-icons {
+        position: absolute;
+        bottom: 20%;
+        left: 80%;
+        cursor: pointer;
+        /* keep only the path (outline) of the heart */
+        fill: transparent;
+        /* color and thickness of the heart outline */
+        stroke: black;
+        stroke-width: 20;
+        z-index: 2;
+        svg {
+            /* make the heart fully visible and not cropped at all */
+            overflow: visible;
+            width: 1.3rem;
+        }
+        path {
+            /*total of heart line visible before animation = 100% */
+            stroke-dashoffset: 0;
+            /*total of heart line to complete within the anilation = 100% */
+            stroke-dasharray: 1550;
+            /* center the anmation to pump up from the center not offset */
+            transform-origin: center;
+        }
+        .heart-background {
+            /* make both heart one above each other */
+            position: absolute;
+            left: 0;
+            right: 0;
+            /* this heart behind */
+            z-index: 1;
+            /* keep it invisible without animation */
+            stroke: none;
+            transform-origin: right 40%;
+            transform: scale(0);
+            opacity: 0;
+        }
+        .heart-main:hover path {
+            /* while hovering first heart : use "stroke-anmation", during 1sec, with ease-in-out flow and keep it at the end */
+            animation: stroke-animation 0.8s ease-in-out forwards;
+        }
+        /* while clicking main heart, modify the background heart's path */
+        .heart-main:hover~.heart-background {
+            animation: fill 1s 0.5s ease-in-out both;
+        }
+    }
 }

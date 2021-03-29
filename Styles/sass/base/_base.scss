@@ -1,9 +1,19 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    margin: 0;
+    font: 100 16px 'Roboto', sans-serif;
+    margin: auto;
+    height: 100vh;
 }
 
 .typo.main {
-    font-family: 'Shrikhand', cursive;
+    @include Shrikhand;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: inherit;
+    cursor: pointer;
+    color: black;
 }

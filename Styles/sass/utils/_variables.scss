@@ -1,6 +1,9 @@
 $color-primary: #9356DC;
+$color-primary-light: lighten($color-primary, 30%);
 $color-secondary: #FF79DA;
+$color-secondary-light: lighten($color-secondary, 30%);
 $color-tertiary: #99E2D0;
+$bg-gradient: linear-gradient($color-secondary, $color-primary);
 $bg-darkgrey:#eaeaea;
 $bg-lightgrey: #f6f6f6;
 $bg-lightblack: #363636;
@@ -19,6 +22,11 @@ $shadow-size-m: 0px 5px 10px 2px;
 
 .color-tertiary {
     background: $color-tertiary;
+}
+
+#gradient-vertical {
+    --color-stop-1: $color-secondary-light;
+    --color-stop-2: $color-primary-light;
 }
 
 .bg--darkgrey {
