@@ -2,15 +2,12 @@
     font-family: 'Shrikhand', cursive;
 }
 
-@mixin bg-gradient {
-    background: $bg-gradient;
-}
-
 @mixin btn-gradient {
     margin: 8vw 0 15vw 0;
     padding: 4vw 1vw;
     border: none;
     outline: none;
+    background: $bg-gradient;
     font: inherit;
     a {
         width: 100%;
@@ -66,4 +63,51 @@
     overflow: hidden;
     object-fit: cover;
     /* The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */
+}
+
+@mixin heart {
+    position: absolute;
+    cursor: pointer;
+    /* keep only the path (outline) of the heart */
+    fill: transparent;
+    /* color and thickness of the heart outline */
+    stroke: black;
+    stroke-width: 20;
+    z-index: 1;
+    svg {
+        /* make the heart fully visible and not cropped at all */
+        overflow: visible;
+        width: 1.4rem;
+    }
+    path {
+        /*total of heart line visible before animation = 100% */
+        stroke-dashoffset: 0;
+        /*total of heart line to complete within the anilation = 100% */
+        stroke-dasharray: 1550;
+        /* center the anmation to pump up from the center not offset */
+        transform-origin: center;
+    }
+    .heart-background {
+        /* make both heart one above each other */
+        position: absolute;
+        left: 0;
+        bottom: 4px;
+        /* this heart behind */
+        z-index: -1;
+        /* keep it invisible without animation */
+        transform-origin: right 40%;
+        transform: scale(1);
+        opacity: 1;
+        overflow: hidden;
+        font-size: 1.4rem;
+        color: transparent;
+    }
+    .heart-main:hover path {
+        /* while hovering first heart : use "stroke-anmation", during 1sec, with ease-in-out flow and keep it at the end */
+        animation: stroke-animation 0.8s ease-in-out forwards;
+    }
+    /* while clicking main heart, modify the background heart's path */
+    .heart-main:hover~.heart-background {
+        animation: fill 1s 0.5s ease-in-out both;
+    }
 }

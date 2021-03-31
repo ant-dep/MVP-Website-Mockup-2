@@ -1,13 +1,31 @@
 .location {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    font-size: 1.1rem;
-    font-weight: 400;
-    i {
-        position: absolute;
-        left: 28vw;
+    background: $bg-darkgrey;
+    cursor: pointer;
+    &__main {
+        width: 55%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 400;
+        i {
+            position: absolute;
+            left: 6vw;
+        }
+        &:active {
+            border-bottom: 2px solid $bg-lightgrey;
+        }
+    }
+    &:active {
+        .location__form {
+            display: flex;
+            animation: fill 500ms 300ms ease-in-out both;
+        }
     }
 }
 
@@ -53,7 +71,7 @@
             width: 50vw;
             font-weight: 400;
         }
-        svg {
+        i {
             position: absolute;
             left: 10vw;
             font-size: 1.2rem;
@@ -74,87 +92,54 @@
     @include lighten;
 }
 
-#restaurants,
-.restaurants {
+#restaurants {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    position: relative;
     padding: 5vw;
-    &__card {
+    .restaurants {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-content: center;
+        /* position for hearts */
         position: relative;
-        background-color: white;
-        @include box-shadow($shadow-size-m);
-        border-radius: $small-radius;
-        height: 60vw;
-        margin: 2vw 0;
-        overflow: hidden;
-        img {
-            @include card-img;
-        }
-        figcaption {
-            height: 15%;
-            margin: 0;
-            padding: 0.5em 0 2em 1em;
-            h4,
-            p {
-                margin: 1.5vw 0;
+        width: 100%;
+        &__card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* position for figure, figcaption and tag */
+            position: relative;
+            background-color: white;
+            @include box-shadow($shadow-size-m);
+            border-radius: $small-radius;
+            height: 60vw;
+            margin: 3vw 0;
+            overflow: hidden;
+            img {
+                @include card-img;
+            }
+            figcaption {
+                height: 15%;
+                margin: 0;
+                padding: 0.5em 0 2em 1em;
+                h4,
+                p {
+                    margin: 1.5vw 0;
+                }
+            }
+            .new-Tag {
+                @include new-tag;
+                bottom: 80%;
+                left: 75%;
             }
         }
-        .new-Tag {
-            @include new-tag;
-            bottom: 80%;
-            left: 75%;
-        }
-    }
-    .heart-icons {
-        position: absolute;
-        bottom: 20%;
-        left: 80%;
-        cursor: pointer;
-        /* keep only the path (outline) of the heart */
-        fill: transparent;
-        /* color and thickness of the heart outline */
-        stroke: black;
-        stroke-width: 20;
-        z-index: 2;
-        svg {
-            /* make the heart fully visible and not cropped at all */
-            overflow: visible;
-            width: 1.3rem;
-        }
-        path {
-            /*total of heart line visible before animation = 100% */
-            stroke-dashoffset: 0;
-            /*total of heart line to complete within the anilation = 100% */
-            stroke-dasharray: 1550;
-            /* center the anmation to pump up from the center not offset */
-            transform-origin: center;
-        }
-        .heart-background {
-            /* make both heart one above each other */
-            position: absolute;
-            left: 0;
-            right: 0;
-            /* this heart behind */
-            z-index: 1;
-            /* keep it invisible without animation */
-            stroke: none;
-            transform-origin: right 40%;
-            transform: scale(0);
-            opacity: 0;
-        }
-        .heart-main:hover path {
-            /* while hovering first heart : use "stroke-anmation", during 1sec, with ease-in-out flow and keep it at the end */
-            animation: stroke-animation 0.8s ease-in-out forwards;
-        }
-        /* while clicking main heart, modify the background heart's path */
-        .heart-main:hover~.heart-background {
-            animation: fill 1s 0.5s ease-in-out both;
+        .heart-icons {
+            @include heart;
+            bottom: 15%;
+            right: 10%;
         }
     }
 }

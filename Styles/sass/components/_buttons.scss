@@ -1,7 +1,4 @@
-.btn--linear-gradient {
-    @include bg-gradient;
-}
-
-.description__btn {
+.btn {
     @include btn-gradient;
+    box-shadow: $shadow-size-m darken($bg-darkgrey, $amount: 20%);
 }

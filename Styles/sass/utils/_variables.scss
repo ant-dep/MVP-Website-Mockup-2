@@ -1,7 +1,7 @@
 $color-primary: #9356DC;
-$color-primary-light: lighten($color-primary, 30%);
+$color-primary-light: lighten($color-primary, 15%);
 $color-secondary: #FF79DA;
-$color-secondary-light: lighten($color-secondary, 30%);
+$color-secondary-light: lighten($color-secondary, 15%);
 $color-tertiary: #99E2D0;
 $bg-gradient: linear-gradient($color-secondary, $color-primary);
 $bg-darkgrey:#eaeaea;
@@ -12,6 +12,7 @@ $medium-radius: 20px;
 $large-radius: 50px;
 $shadow-size-s: 0px 8px 15px -5px;
 $shadow-size-m: 0px 5px 10px 2px;
+$shadow-size-l: 0px 0px 6px 5px;
 .color-primary {
     color: $color-primary;
 }
@@ -20,13 +21,12 @@ $shadow-size-m: 0px 5px 10px 2px;
     color: $color-secondary;
 }
 
-.color-tertiary {
-    background: $color-tertiary;
+.linear-gradient {
+    color: $bg-gradient;
 }
 
-#gradient-vertical {
-    --color-stop-1: $color-secondary-light;
-    --color-stop-2: $color-primary-light;
+.color-tertiary {
+    background: $color-tertiary;
 }
 
 .bg--darkgrey {

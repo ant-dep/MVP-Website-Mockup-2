@@ -1,11 +1,15 @@
-body {
-    font: 100 16px 'Roboto', sans-serif;
-    margin: auto;
-    height: 100vh;
+.typo-main {
+    @include Shrikhand;
 }
 
-.typo.main {
-    @include Shrikhand;
+h2 {
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
 h4 {
