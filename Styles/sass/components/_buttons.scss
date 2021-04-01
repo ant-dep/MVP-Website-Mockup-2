@@ -1,4 +1,8 @@
 .btn {
     @include btn-gradient;
     box-shadow: $shadow-size-m darken($bg-darkgrey, $amount: 20%);
+    &:hover {
+        background: $bg-gradient-light;
+        box-shadow: $shadow-size-m darken($bg-darkgrey, $amount: 40%);
+    }
 }

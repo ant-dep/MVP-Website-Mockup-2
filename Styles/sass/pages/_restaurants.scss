@@ -11,6 +11,7 @@ header {
 picture {
     position: relative;
     img {
+        max-height: 30vh;
         @include card-img;
     }
 }
@@ -75,40 +76,66 @@ picture {
         }
     }
     &__option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
         border-radius: $small-radius;
         @include box-shadow($shadow-size-l);
         width: 85%;
-        padding: 1vw 3vw;
+        padding: 3vw;
         margin: 2vw 0;
-        line-height: 5px;
         overflow: hidden;
         animation: showing-up 800ms 400ms both;
+        a {
+            width: 97%;
+        }
+        h3 {
+            margin: 1vw 0;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+        p {
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            white-space: nowrap;
+            width: 100%;
+            margin: 0;
+        }
         strong {
             position: absolute;
-            right: 7vw;
-            bottom: 4vw;
+            right: 5vw;
+            bottom: 3vw;
         }
         .icon-bg {
+            justify-content: center;
+            align-items: center;
             position: absolute;
             right: 0;
-            bottom: -0.3vw;
+            bottom: 0;
+            height: 100%;
+            width: 17%;
             background: $color-tertiary;
             transform: translateX(200%);
             border-radius: 0 15px 15px 0;
-            padding: 6.5vw 5vw;
             display: none;
+            margin: auto;
             i {
                 color: white;
                 font-size: 1.4rem;
             }
         }
         &:hover {
+            a {
+                width: 82%;
+            }
             strong {
                 animation: translateX 400ms both;
             }
             .icon-bg {
-                display: block;
+                display: flex;
                 animation: check 400ms both;
                 i {
                     animation: spin 500ms both;

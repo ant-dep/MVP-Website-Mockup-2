@@ -1,3 +1,61 @@
+/* loader animation */
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(250%, 0);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+/* end of loader animation */
+
+@keyframes fade-out {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* path animation of 1st hearts */
+
 @keyframes stroke-animation {
     0% {
         stroke-dashoffset: 1550;
@@ -8,6 +66,9 @@
         stroke: $color-primary;
     }
 }
+
+
+/* filling animation of 2nd hearts */
 
 @keyframes fill {
     0% {
@@ -30,14 +91,20 @@
     }
 }
 
+
+/* moving left prices of menus options */
+
 @keyframes translateX {
     from {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-200%);
+        transform: translateX(-150%);
     }
 }
+
+
+/* moving left basket check along prices */
 
 @keyframes check {
     from {
@@ -48,6 +115,9 @@
     }
 }
 
+
+/* spining check animation while moving left */
+
 @keyframes spin {
     from {
         transform: rotate(-360deg);
@@ -56,6 +126,9 @@
         transform: rotate(0deg);
     }
 }
+
+
+/* loading of menu options */
 
 @keyframes showing-up {
     0% {

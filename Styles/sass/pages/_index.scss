@@ -1,3 +1,43 @@
+/* LOADER */
+
+.lds-ellipsis {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 65vh;
+    top: 6vh;
+    z-index: 99;
+    animation: fade-out 600ms 2400ms ease-out both;
+    & div {
+        position: absolute;
+        top: 30vh;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        &:nth-child(1) {
+            left: 25%;
+            animation: lds-ellipsis1 0.6s 4;
+            background: $color-secondary;
+        }
+        &:nth-child(2) {
+            left: 25%;
+            animation: lds-ellipsis2 0.6s 4;
+            background: $color-secondary;
+        }
+        &:nth-child(3) {
+            left: 45%;
+            animation: lds-ellipsis2 0.6s 4;
+            background: $bg-gradient;
+        }
+        &:nth-child(4) {
+            left: 65%;
+            animation: lds-ellipsis3 0.6s 4;
+            background: $color-primary;
+        }
+    }
+}
+
 .location {
     display: flex;
     flex-direction: column;
@@ -16,6 +56,7 @@
         i {
             position: absolute;
             left: 6vw;
+            top: 4vw;
         }
         &:active {
             border-bottom: 2px solid $bg-lightgrey;
@@ -73,23 +114,26 @@
         }
         i {
             position: absolute;
-            left: 10vw;
+            left: 9vw;
             font-size: 1.2rem;
         }
         .icon-nb {
             position: absolute;
             @include number-ul;
-            left: -2vw;
+            left: -3vw;
         }
         .fa-mobile-alt,
         .fa-list-ul {
             color: lighten($color: #000000, $amount: 50%);
         }
+        &:hover {
+            @include hover-btn($bg-lightgrey);
+        }
     }
 }
 
 .bg--mainclr-light {
-    @include lighten;
+    background: lighten($color-secondary, $amount: 36%);
 }
 
 #restaurants {
@@ -98,6 +142,7 @@
     justify-content: center;
     align-content: center;
     padding: 5vw;
+    margin-bottom: 5vw;
     .restaurants {
         display: flex;
         flex-direction: column;
@@ -134,6 +179,9 @@
                 @include new-tag;
                 bottom: 80%;
                 left: 75%;
+            }
+            &:hover {
+                @include hover-btn(white);
             }
         }
         .heart-icons {

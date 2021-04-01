@@ -7,9 +7,14 @@ body {
     position: relative;
 }
 
+.loader__opacity {
+    /* whiten all the page to show only the loader */
+    animation: fade-in 2800ms ease-out;
+}
+
 #page {
     /* footer height */
-    padding-bottom: 12rem;
+    padding-bottom: 22vh;
 }
 
 header {
@@ -33,20 +38,19 @@ header {
     /* keep footer at the bottom */
     bottom: 0;
     /* fill the padding-bottom form .page */
-    height: 9.5rem;
+    height: 16vh;
     width: 94%;
     color: white;
     display: flex;
     flex-direction: column;
-    padding: 5vw 0 10vw 6vw;
+    justify-content: space-around;
+    padding: 8vw 0 10vw 6vw;
     img {
         filter: invert(1);
         width: 30%;
-        margin: 2vw 0 5vw 0vw;
+        margin: 1vw 0;
     }
     a {
-        display: flex;
-        justify-content: flex-start;
         text-decoration: inherit;
         cursor: pointer;
         color: white;
