@@ -9,11 +9,30 @@
 }
 
 picture {
-    position: absolute;
-    z-index: -1;
-    max-height: 30vh;
+    position: relative;
     img {
+        max-height: 30vh;
         @include card-img;
+    }
+}
+
+.menu__header {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px 50px 0 0;
+    padding-top: 2vw;
+    .heart-icons {
+        @include heart;
+        right: 12%;
+        top: 55%;
+    }
+    h1 {
+        padding-left: 6vw;
+        margin-bottom: 0;
     }
 }
 
@@ -23,31 +42,14 @@ picture {
     justify-content: center;
     align-items: stretch;
     width: 100%;
-    border-radius: 50px 50px 0 0;
-    margin-top: 50%;
-    &__header {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 2vw;
-        .heart-icons {
-            @include heart;
-            right: 10%;
-            top: 45%;
-        }
-        h1 {
-            padding-left: 6vw;
-        }
-    }
+    padding-top: 5vw;
     .article {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 2vw;
+        margin-top: 4vw;
         animation: showing-up $anim-time both;
         &__title {
             position: relative;
@@ -104,7 +106,7 @@ picture {
         }
         strong {
             position: absolute;
-            right: 12%;
+            right: 5vw;
             bottom: 3vw;
         }
         .icon-bg {
@@ -126,7 +128,6 @@ picture {
             }
         }
         &:hover {
-            cursor: pointer;
             a {
                 width: 70%;
             }
