@@ -2,6 +2,7 @@ body {
     font: 100 16px 'Roboto', sans-serif;
     margin: auto;
     min-height: 100vh;
+    max-width: 1024px;
     /* For footer positionning */
     width: 100%;
     position: relative;
@@ -13,8 +14,9 @@ body {
 }
 
 #page {
+    position: relative;
     /* footer height */
-    padding-bottom: 22vh;
+    padding-bottom: 45%;
 }
 
 header {
@@ -24,7 +26,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 1px 5px -1px $bg-lightblack;
+        box-shadow: 0px 0px 10px -8px $bg-lightblack;
         z-index: 1;
         height: 15vw;
         img {
@@ -38,13 +40,13 @@ header {
     /* keep footer at the bottom */
     bottom: 0;
     /* fill the padding-bottom form .page */
-    height: 16vh;
-    width: 94%;
+    height: 8%;
+    width: 100%;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 8vw 0 10vw 6vw;
+    padding: 8vw 0 10vw 0;
     img {
         filter: invert(1);
         width: 30%;
@@ -54,19 +56,20 @@ header {
         text-decoration: inherit;
         cursor: pointer;
         color: white;
-        padding: 0vw 0 3vw 0vw;
+        padding-bottom: 3vw;
         font-size: 14px;
         font-weight: 400;
+        padding-left: 4vw;
     }
     .fork,
     .hands {
         display: flex;
         justify-content: flex-start;
         position: relative;
-        padding-left: 7vw;
+        padding-left: 3vw;
         i {
             position: absolute;
-            left: 0;
+            left: 4vw;
             font-size: 0.9rem;
         }
     }

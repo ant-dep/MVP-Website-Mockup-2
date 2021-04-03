@@ -17,6 +17,7 @@
         height: 100%;
         padding: 5vw;
         font-weight: 400;
+        font-size: 1.1rem;
         color: white;
     }
 }
@@ -110,11 +111,13 @@
         font-size: 1.4rem;
         color: transparent;
     }
-    .heart-main:hover path {
-        /* while hovering first heart : use "stroke-anmation", during 1sec, with ease-in-out flow and keep it at the end */
-        animation: stroke-animation 0.8s ease-in-out forwards;
+    #toggle-heart:hover {
+        /* while hovering the transparent checkbox above, modify the heart-main path */
+        &~.heart-main path {
+            animation: stroke-animation 3 * $anim-time ease-in-out forwards;
+        }
     }
-    /* while clicking main heart, modify the background heart */
+    /* while checking the box, modify the heart-background filling */
     #toggle-heart:checked {
         &~.heart-background {
             animation: fill $anim-time $anim-delay ease-in-out both;
