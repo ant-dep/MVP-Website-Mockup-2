@@ -1,0 +1,58 @@
+$color-primary: #9356DC;
+$color-primary-light: lighten($color-primary, 10%);
+$color-secondary: #FF79DA;
+$color-secondary-light: lighten($color-secondary, 10%);
+$color-tertiary: #99E2D0;
+$bg-gradient: linear-gradient($color-secondary, $color-primary);
+$bg-gradient-light: linear-gradient($color-secondary-light, $color-primary-light);
+$bg-darkgrey:#eaeaea;
+$bg-lightgrey: #f6f6f6;
+$bg-lightblack: #363636;
+$small-radius: 15px;
+$medium-radius: 20px;
+$large-radius: 50px;
+$shadow-size-s: 0px 8px 15px -5px;
+$shadow-size-m: 0px 5px 10px 2px;
+$shadow-size-l: 0px 0px 6px 5px;
+$loading-time: 2400ms;
+$anim-time: 400ms;
+$anim-delay: 100ms;
+.color-primary {
+    color: $color-primary;
+}
+
+.color-secondary {
+    color: $color-secondary;
+}
+
+.linear-gradient {
+    color: $bg-gradient;
+}
+
+.color-tertiary {
+    background: $color-tertiary;
+}
+
+.bg--darkgrey {
+    background-color: $bg-darkgrey;
+}
+
+.bg--lightgrey {
+    background-color: $bg-lightgrey;
+}
+
+.bg--lightblack {
+    background-color: $bg-lightblack;
+}
+
+.btn--rounded {
+    border-radius: $large-radius;
+}
+
+.btn--squared {
+    border-radius: $medium-radius;
+}
+
+.card--squared {
+    border-radius: $small-radius;
+}

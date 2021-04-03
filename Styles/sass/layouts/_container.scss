@@ -1,0 +1,73 @@
+body {
+    font: 100 16px 'Roboto', sans-serif;
+    margin: auto;
+    min-height: 100vh;
+    /* For footer positionning */
+    width: 100%;
+    position: relative;
+}
+
+.loader__opacity {
+    /* whiten all the page to show only the loader */
+    animation: fade-in $loading-time ease-out;
+}
+
+#page {
+    /* footer height */
+    padding-bottom: 22vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 1px 5px -1px $bg-lightblack;
+        z-index: 1;
+        height: 15vw;
+        img {
+            width: 45vw;
+        }
+    }
+}
+
+#footer {
+    position: absolute;
+    /* keep footer at the bottom */
+    bottom: 0;
+    /* fill the padding-bottom form .page */
+    height: 16vh;
+    width: 94%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 8vw 0 10vw 6vw;
+    img {
+        filter: invert(1);
+        width: 30%;
+        margin: 1vw 0;
+    }
+    a {
+        text-decoration: inherit;
+        cursor: pointer;
+        color: white;
+        padding: 0vw 0 3vw 0vw;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .fork,
+    .hands {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        padding-left: 7vw;
+        i {
+            position: absolute;
+            left: 0;
+            font-size: 0.9rem;
+        }
+    }
+}

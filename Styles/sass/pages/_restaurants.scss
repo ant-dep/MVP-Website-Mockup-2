@@ -1,0 +1,150 @@
+.logo {
+    position: relative;
+    .fa-arrow-left {
+        position: absolute;
+        left: 5vw;
+        top: 5vw;
+        font-size: 1.3rem;
+    }
+}
+
+picture {
+    position: relative;
+    img {
+        max-height: 30vh;
+        @include card-img;
+    }
+}
+
+.menu__header {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px 50px 0 0;
+    padding-top: 2vw;
+    .heart-icons {
+        @include heart;
+        right: 12%;
+        top: 55%;
+    }
+    h1 {
+        padding-left: 6vw;
+        margin-bottom: 0;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    padding-top: 5vw;
+    .article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 4vw;
+        animation: showing-up $anim-time both;
+        &__title {
+            position: relative;
+            left: 7vw;
+            align-self: flex-start;
+            border-bottom: 4px solid $color-tertiary;
+            width: 12%;
+            margin-bottom: 2vw;
+            animation: showing-up (2 * $anim-time) $anim-delay both;
+            h2 {
+                /* reduce the space between colored border and the title */
+                margin-bottom: 1.5vw;
+            }
+        }
+    }
+    @for $i from 1 through 4 {
+        .article,
+        .menu__option {
+            // :nth-child(1-3)
+            &:nth-child(#{$i}) {
+                // Delay the animation.
+                animation-delay: $i * (2 * $anim-delay);
+            }
+        }
+    }
+    &__option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        border-radius: $small-radius;
+        @include box-shadow($shadow-size-l);
+        width: 85%;
+        padding: 3vw;
+        margin: 2vw 0;
+        overflow: hidden;
+        animation: showing-up (2 * $anim-time) $anim-delay both;
+        a {
+            width: 90%;
+        }
+        h3 {
+            margin: 1vw 0;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+        p {
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            white-space: nowrap;
+            width: 100%;
+            margin: 0;
+        }
+        strong {
+            position: absolute;
+            right: 5vw;
+            bottom: 3vw;
+        }
+        .icon-bg {
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 17%;
+            background: $color-tertiary;
+            transform: translateX(200%);
+            border-radius: 0 15px 15px 0;
+            display: none;
+            margin: auto;
+            i {
+                color: white;
+                font-size: 1.4rem;
+            }
+        }
+        &:hover {
+            a {
+                width: 70%;
+            }
+            strong {
+                animation: translateX $anim-time both;
+            }
+            .icon-bg {
+                display: flex;
+                animation: check $anim-time ease-in-out both;
+                i {
+                    animation: spin $anim-time $anim-delay both;
+                }
+            }
+        }
+    }
+    .btn {
+        align-self: center;
+        width: 50%;
+    }
+}
