@@ -9,7 +9,7 @@ body {
 
 .loader__opacity {
     /* whiten all the page to show only the loader */
-    animation: fade-in 2800ms ease-out;
+    animation: fade-in $loading-time ease-out;
 }
 
 #page {

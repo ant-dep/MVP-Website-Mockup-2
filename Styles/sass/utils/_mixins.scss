@@ -114,8 +114,10 @@
         /* while hovering first heart : use "stroke-anmation", during 1sec, with ease-in-out flow and keep it at the end */
         animation: stroke-animation 0.8s ease-in-out forwards;
     }
-    /* while clicking main heart, modify the background heart's path */
-    .heart-main:hover~.heart-background {
-        animation: fill 1s 0.5s ease-in-out both;
+    /* while clicking main heart, modify the background heart */
+    #toggle-heart:checked {
+        &~.heart-background {
+            animation: fill $anim-time $anim-delay ease-in-out both;
+        }
     }
 }

@@ -1,10 +1,10 @@
 .location__form {
-    display: none;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 45%;
-    padding: 4vw 0;
-    animation: fill 500ms forwards;
+    position: absolute;
+    transform: translateY(150%);
     input {
         background-color: $bg-darkgrey;
         color: black;

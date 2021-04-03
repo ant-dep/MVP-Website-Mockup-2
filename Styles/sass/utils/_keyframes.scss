@@ -91,6 +91,17 @@
     }
 }
 
+@keyframes translateY {
+    from {
+        transform: translateY(150%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
 
 /* moving left prices of menus options */
 
@@ -99,7 +110,7 @@
         transform: translateX(0);
     }
     to {
-        transform: translateX(-150%);
+        transform: translateX(-185%);
     }
 }
 

@@ -1,8 +1,8 @@
-header {
+.logo {
     position: relative;
-    i {
+    .fa-arrow-left {
         position: absolute;
-        left: 7vw;
+        left: 5vw;
         top: 5vw;
         font-size: 1.3rem;
     }
@@ -18,7 +18,7 @@ picture {
 
 .menu__header {
     position: absolute;
-    top: 68vw;
+    top: 15%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -50,7 +50,7 @@ picture {
         align-items: center;
         width: 100%;
         margin-top: 4vw;
-        animation: showing-up 400ms both;
+        animation: showing-up $anim-time both;
         &__title {
             position: relative;
             left: 7vw;
@@ -58,7 +58,7 @@ picture {
             border-bottom: 4px solid $color-tertiary;
             width: 12%;
             margin-bottom: 2vw;
-            animation: showing-up 800ms 100ms both;
+            animation: showing-up (2 * $anim-time) $anim-delay both;
             h2 {
                 /* reduce the space between colored border and the title */
                 margin-bottom: 1.5vw;
@@ -71,7 +71,7 @@ picture {
             // :nth-child(1-3)
             &:nth-child(#{$i}) {
                 // Delay the animation.
-                animation-delay: $i * (200ms);
+                animation-delay: $i * (2 * $anim-delay);
             }
         }
     }
@@ -86,9 +86,9 @@ picture {
         padding: 3vw;
         margin: 2vw 0;
         overflow: hidden;
-        animation: showing-up 800ms 400ms both;
+        animation: showing-up (2 * $anim-time) $anim-delay both;
         a {
-            width: 97%;
+            width: 90%;
         }
         h3 {
             margin: 1vw 0;
@@ -129,16 +129,16 @@ picture {
         }
         &:hover {
             a {
-                width: 82%;
+                width: 70%;
             }
             strong {
-                animation: translateX 400ms both;
+                animation: translateX $anim-time both;
             }
             .icon-bg {
                 display: flex;
-                animation: check 400ms both;
+                animation: check $anim-time ease-in-out both;
                 i {
-                    animation: spin 500ms both;
+                    animation: spin $anim-time $anim-delay both;
                 }
             }
         }
