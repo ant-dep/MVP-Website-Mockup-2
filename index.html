@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8" />
@@ -11,6 +11,7 @@
     <!--Personnal link to Font Awesome library-->
     <script src="https://kit.fontawesome.com/d28e6df8ab.js" crossorigin="anonymous"></script>
     <meta name="Ohmyfood!" content="Draft for Ohmyfood! website" />
+    <title>Ohmyfood!</title>
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="Ohmyfood!">
@@ -44,7 +45,6 @@
                     <a href="/index.html"><img src="/images/logo/ohmyfood@2x.svg" alt="Ohmyfood! logo"></a>
                 </div>
                 <div class="location bg--darkgrey">
-                    <label for="toggle">  </label>
                     <input type="checkbox" id="toggle" class="visually-hidden">
                     <div class="location__main">
                         <i class="fas fa-map-marker-alt"></i>
@@ -59,9 +59,7 @@
                 <section class="description bg--lightgrey">
                     <h1>Réservez le menu qui vous convient!</h1>
                     <p>Découvrez des restaurants d'exception, sélectionnez par nos soins.</p>
-                    <button class="btn btn--rounded linear-gradient" type="button">
-                    <a href="#restaurants">Explorer nos restaurants</a>
-            </button>
+                    <a href="#restaurants" class="btn btn--rounded linear-gradient">Explorer nos restaurants</a>
                 </section>
             </header>
 
@@ -93,13 +91,12 @@
                                 <h4>La Palette du goût</h4>
                                 <p>Ménilmontant</p>
                             </figcaption>
-                            <p class="new-Tag color-tertiary">Nouveau</p>
                         </figure>
+                        <p class="new-Tag color-tertiary">Nouveau</p>
                     </a>
                     <div class="heart-icons">
-                        <label for="toggle">  </label>
-                        <input type="checkbox" id="toggle-heart" class="visually-hidden">
-                        <svg class="heart-main" viewBox="0 0 512 512" title="heart">
+                        <input type="checkbox" class="toggle-heart visually-hidden">
+                        <svg class="heart-main" viewBox="0 0 512 512">
                             <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
                         </svg>
                         <i class="fas fa-heart heart-background"></i>
@@ -113,13 +110,12 @@
                                 <h4>La note enchantée</h4>
                                 <p>Charonne</p>
                             </figcaption>
-                            <p class="new-Tag color-tertiary">Nouveau</p>
                         </figure>
+                        <p class="new-Tag color-tertiary">Nouveau</p>
                     </a>
                     <div class="heart-icons">
-                        <label for="toggle">  </label>
-                        <input type="checkbox" id="toggle-heart" class="visually-hidden">
-                        <svg class="heart-main" viewBox="0 0 512 512" title="heart">
+                        <input type="checkbox" class="toggle-heart visually-hidden">
+                        <svg class="heart-main" viewBox="0 0 512 512">
                             <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
                         </svg>
                         <i class="fas fa-heart heart-background"></i>
@@ -128,7 +124,7 @@
                 <div class="restaurants">
                     <a href="a_la_francaise.html">
                         <figure class="restaurants__card card--squared">
-                            <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="&Agrave la française">
+                            <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
                             <figcaption>
                                 <h4>À la française</h4>
                                 <p>Cité Rouge</p>
@@ -136,9 +132,8 @@
                         </figure>
                     </a>
                     <div class="heart-icons">
-                        <label for="toggle">  </label>
-                        <input type="checkbox" id="toggle-heart" class="visually-hidden">
-                        <svg class="heart-main" viewBox="0 0 512 512" title="heart">
+                        <input type="checkbox" class="toggle-heart visually-hidden">
+                        <svg class="heart-main" viewBox="0 0 512 512">
                             <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
                         </svg>
                         <i class="fas fa-heart heart-background"></i>
@@ -155,9 +150,8 @@
                         </figure>
                     </a>
                     <div class="heart-icons">
-                        <label for="toggle">  </label>
-                        <input type="checkbox" id="toggle-heart" class="visually-hidden">
-                        <svg class="heart-main" viewBox="0 0 512 512" title="heart">
+                        <input type="checkbox" class="toggle-heart visually-hidden">
+                        <svg class="heart-main" viewBox="0 0 512 512">
                             <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
                         </svg>
                         <i class="fas fa-heart heart-background"></i>

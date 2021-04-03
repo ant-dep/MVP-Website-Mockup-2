@@ -187,14 +187,14 @@
                     margin: 1.5vw 0;
                 }
             }
-            .new-Tag {
-                @include new-tag;
-                bottom: 80%;
-                left: 75%;
-            }
             &:hover {
                 @include hover-btn(white);
             }
+        }
+        .new-Tag {
+            @include new-tag;
+            top: 4%;
+            right: 4%;
         }
         .heart-icons {
             @include heart;
