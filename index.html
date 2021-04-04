@@ -32,11 +32,13 @@
 </head>
 
 <body>
-    <div class="loader lds-ellipsis">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="loader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <div class="loader__opacity">
         <div id="page">
@@ -57,7 +59,7 @@
                     </form>
                 </div>
                 <section class="description bg--lightgrey">
-                    <h1>Réservez le menu qui vous convient!</h1>
+                    <span>Réservez le menu qui vous convient!</span>
                     <p>Découvrez des restaurants d'exception, sélectionnez par nos soins.</p>
                     <a href="#restaurants" class="btn btn--rounded linear-gradient">Explorer nos restaurants</a>
                 </section>
@@ -161,14 +163,16 @@
         </div>
         <footer id="footer" class="color--invert bg--lightblack">
             <a href="index.html"><img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood! logo"></a>
-            <div class="fork">
-                <i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a>
+            <div class="footer__links">
+                <div class="fork">
+                    <i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a>
+                </div>
+                <div class="hands">
+                    <i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a>
+                </div>
+                <a href="#">Mentions légales</a>
+                <a href="mailto:contact@ohmyfood-paris.com">Contact</a>
             </div>
-            <div class="hands">
-                <i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a>
-            </div>
-            <a href="#">Mentions légales</a>
-            <a href="mailto:contact@ohmyfood-paris.com">Contact</a>
         </footer>
     </div>
 </body>
