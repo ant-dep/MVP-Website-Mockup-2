@@ -4,8 +4,6 @@ body {
     min-height: 100vh;
     /* For footer positionning */
     width: 100%;
-    position: relative;
-    max-width: 1024px;
 }
 
 .loader__opacity {
@@ -15,8 +13,7 @@ body {
 
 #page {
     /* footer height */
-    padding-bottom: 22vh;
-    max-width: 1024px;
+    position: relative;
 }
 
 header {
@@ -26,50 +23,60 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 1px 5px -1px $bg-lightblack;
-        z-index: 1;
-        height: 15vw;
+        box-shadow: 0 1px 5px -4px $bg-lightblack;
+        height: 4em;
+        @media screen and (min-width: 400px) {
+            height: 7em;
+        }
         img {
             width: 45vw;
+            max-width: 300px;
         }
     }
 }
 
 #footer {
-    position: absolute;
+    position: static;
     /* keep footer at the bottom */
     bottom: 0;
     /* fill the padding-bottom form .page */
-    height: 16vh;
-    width: 94%;
+    height: 13em;
+    width: 100%;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 8vw 0 10vw 6vw;
+    justify-content: center;
+    align-items: flex-start;
     img {
         filter: invert(1);
-        width: 30%;
-        margin: 1vw 0;
+        width: 50%;
+        padding: 1.2em;
     }
-    a {
-        text-decoration: inherit;
-        cursor: pointer;
-        color: white;
-        padding: 0vw 0 3vw 0vw;
-        font-size: 14px;
-        font-weight: 400;
-    }
-    .fork,
-    .hands {
+    .footer__links {
         display: flex;
-        justify-content: flex-start;
-        position: relative;
-        padding-left: 7vw;
-        i {
-            position: absolute;
-            left: 0;
-            font-size: 0.9rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 1.2em;
+        a {
+            text-decoration: inherit;
+            cursor: pointer;
+            color: white;
+            padding-bottom: 1.2em;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .fork,
+        .hands {
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+            padding-left: 2.2em;
+            i {
+                position: absolute;
+                left: 0;
+                font-size: 0.9rem;
+            }
         }
     }
 }
