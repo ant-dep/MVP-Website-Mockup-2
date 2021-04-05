@@ -6,10 +6,6 @@ h1 {
     align-self: flex-start;
     padding: 0 0 4vw 5vw;
     font-size: 1.7rem;
-    @media screen and (min-width: 400px) {
-        align-self: center;
-        padding: 4vw 0;
-    }
 }
 
 h2 {

@@ -1,10 +1,40 @@
 .logo {
-    position: relative;
-    .fa-arrow-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 5px -4px $bg-lightblack;
+    height: 20%;
+    width: 100%;
+    @media screen and (min-width: 728px) {
+        background-color: transparent;
         position: absolute;
-        left: 10%;
-        top: 35%;
-        font-size: 1.3rem;
+        height: 10%;
+        box-shadow: none;
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 60%;
+        @media screen and (min-width: 728px) {
+            align-items: flex-end;
+            background-color: transparent;
+            filter: invert(1);
+        }
+        img {
+            width: 45vw;
+            max-width: 400px;
+        }
+        .fa-arrow-left {
+            position: absolute;
+            left: 0;
+            top: 20%;
+            font-size: 1.3rem;
+            @media screen and (min-width: 728px) {
+                font-size: 2.5rem;
+            }
+        }
     }
 }
 
@@ -15,6 +45,9 @@ picture {
     img {
         max-height: 40vh;
         @include card-img;
+        @media screen and (min-width: 728px) {
+            max-height: 50vh;
+        }
     }
 }
 
@@ -26,8 +59,8 @@ picture {
     width: 100%;
     margin-top: 25vh;
     border-radius: 50px 50px 0 0;
-    @media screen and (min-width: 400px) {
-        margin-top: 35vh;
+    @media screen and (min-width: 728px) {
+        margin-top: 40vh;
     }
     &__header {
         position: relative;
@@ -37,10 +70,19 @@ picture {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        h1 {
+            @media screen and (min-width: 400px) {
+                align-self: center;
+                padding: 4vw 0;
+            }
+        }
         .heart-icons {
             @include heart;
             right: 10%;
-            top: 38%;
+            top: 33%;
+            @media screen and (min-width: 400px) {
+                top: 42%;
+            }
         }
     }
     .article {

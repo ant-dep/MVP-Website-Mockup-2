@@ -13,27 +13,26 @@
         font-weight: 400;
         border: 3px solid $bg-lightgrey;
         border-radius: 10px 0 0 10px;
-        padding: 1.5vw 0vw;
+        padding: 0.8em 1em;
         cursor: pointer;
         outline: none;
         width: 100%;
+        &::placeholder {
+            color: $bg-lightblack;
+            font-size: 0.9rem;
+            font-weight: 400;
+            border-radius: 10px 0 0 10px;
+            opacity: 0.7;
+        }
         &:focus {
             color: white;
             background-color: $bg-lightblack;
-            padding-left: 2vw;
+            padding-left: 2em;
             &::placeholder {
                 color: transparent;
                 background: $bg-lightblack;
             }
         }
-    }
-     ::placeholder {
-        color: $bg-lightblack;
-        font-size: 0.9rem;
-        font-weight: 400;
-        padding-left: 2vw;
-        opacity: 0.7;
-        background: $bg-darkgrey;
     }
     .btn-rechercher {
         display: none;
@@ -47,7 +46,7 @@
         border-top: 3px solid $bg-lightgrey;
         border-right: 3px solid $bg-lightgrey;
         border-bottom: 3px solid $bg-lightgrey;
-        padding: 1.4vw 1.7vw;
+        padding: 0.825em;
         font: inherit;
     }
 }
