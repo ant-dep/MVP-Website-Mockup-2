@@ -73,6 +73,14 @@
         width: 90vw;
         margin: 0;
     }
+    .btn {
+        @include btn-gradient;
+        box-shadow: $shadow-size-m darken($bg-darkgrey, $amount: 20%);
+        &:hover {
+            background: $bg-gradient-light;
+            box-shadow: $shadow-size-m darken($bg-darkgrey, $amount: 40%);
+        }
+    }
 }
 
 .fonctionnement {
@@ -149,7 +157,7 @@
             }
             .fa-mobile-alt,
             .fa-list-ul {
-                color: lighten($color: #000000, $amount: 50%);
+                color: lighten(#000000, 50%);
             }
             &:hover {
                 @include hover-btn($bg-lightgrey);
@@ -159,7 +167,7 @@
 }
 
 .bg--mainclr-light {
-    background: lighten($color-secondary, $amount: 36%);
+    background: lighten($color-primary, 36%);
 }
 
 #restaurants {
